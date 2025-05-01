@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page Responsive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navbar Tetap Responsive</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      color: #4CAF50;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    /* Placeholder untuk konten agar tidak tertutup navbar */
+    .spacer {
+      height: 60px;
+    }
+
+    /* Responsive Menu */
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        flex-direction: column;
+        background: #333;
+        width: 100%;
+        display: none;
+      }
+
+      .menu.show {
+        display: flex;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .toggle {
+        cursor: pointer;
+        color: white;
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <!--<div class="brand">LOGO</div>-->
+    <button class="toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+      <a href="#Home">Home</a>
+      <a href="#Galeri Produk">Galeri Produk</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+  </nav>
+
+  <div class="spacer"></div>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+  <!--kaatas ini adalah nafbar up -->
+  
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+    }
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background: #575757;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x600/?nature,technology') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      background-color: rgba(0,0,0,0.6);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    .feature {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .feature h3 {
+      margin-bottom: 1rem;
+    }
+    .cta {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .cta a {
+      display: inline-block;
+      background: white;
+      color: #4CAF50;
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #222;
+      color: #aaa;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  
+  <!--musoverfooter link -->
+    <style>
+    a:hover {
+      color: orange;
+    }
+  </style>
+  
+  
+  <!--testimonial-->
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .testimonial-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .testimonial {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .testimonial h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        .testimonial p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        @media (min-width: 768px) {
+            .testimonial-container {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+  
+  
+  <!--FAQ-->
+<style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+        }
+
+        .faq-title {
+            width: 100%;
+            padding: 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: left;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-title:hover {
+            background-color: #0056b3;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 15px;
+            background-color: #f1f1f1;
+            margin-top: 5px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .faq-container {
+                padding: 15px;
+            }
+
+            .faq-title {
+                font-size: 16px;
+            }
+
+            .faq-content {
+                font-size: 14px;
+            }
+        }
+    </style>
+	<!--FAQ-->
+	
+	<!--galery produk-->
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .product-info {
+            transform: translateY(0);
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+<!--galery produk-->
+  
+</head>
+<body>
+
+  <header>
+    <h1>Jasa cetak dus kemasan</h1>
+    <p>Jasa cetak dus kemssan solusi cetak kemasan anda</p>
+  </header>
+
+  <!--<nav>
+    <a href="index">Home</a>
+    <a href="file:///C:/Users/USER/Downloads/tes%20web/buat%20github.io/produk">Produk</a>
+    <a href="file:///C:/Users/USER/Downloads/tes%20web/buat%20github.io/produk">Kontak</a>
+  </nav>-->
+
+  <section class="hero">
+    <h2>Kemasan adalah cermin dari produk anda</h2>
+  </section>
+  
+  <!--galery produk -->
+<section>
+        <!--<h2>Galeri Produk</h2>-->
+        <!--<p>Kami kemasanpack.com menyediakan berbagai jenis kemasan sesuai kebutuhan Anda,</p>-->
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2023/12/box-roti-300x300.jpg" alt="Box Brownies">
+            <div class="product-info">
+                <h2>Box Snack</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2024/02/Cetak-Kemasan-Kue-Kering-Lebaran-600x644.jpg" alt="Box Hampers">
+            <div class="product-info">
+                <h2>Box Hampers</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2023/12/box-cake-300x300.jpg" alt="Box Mika">
+            <div class="product-info">
+                <h2>Box Mika</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2023/12/cetak-kemasan-makanan-aplod-300x300.jpg" alt="lunch box ">
+            <div class="product-info">
+                <h2>Lunch box</h2>
+                <p></p>
+            </div>
+        </div>
+    </div>
+	<div class="gallery">
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2023/12/cetak-kardus-kemasan-kemasanpack-300x300.jpg" alt="Box Jinjing">
+            <div class="product-info">
+                <h2>Box Jinjing</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2024/10/cetak-kemasan-tangerang-42.webp" alt="Hard Box Custom">
+            <div class="product-info">
+                <h2>Hard Box Custom</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2024/11/cetak-kemasan-elektronik.jpg" alt="Cetak Kemasan Elektronik">
+            <div class="product-info">
+                <h2>Box Elektronik</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://kemasanpack.com/wp-content/uploads/2024/10/manfaat-kemasan-softbox-untuk-produk.jpeg" alt="Dus Parfum Custom">
+            <div class="product-info">
+                <h2>Dus Parfum Custom</h2>
+                <p>1750</p>
+            </div>
+        </div>
+    </div>
+</Section>
+	<!--galery produk-->
+  
+
+  <div class="container" id="fitur">
+    <h2 style="text-align:center; margin-bottom:1.5rem;">Cetak dus kemasan berbagai macam bahan kertas</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Bahan Kertas Duplex</h3>
+        <p>Kertas ini memiliki dua sisi dengan karakteristik berbeda: satu sisi putih dan halus (untuk dicetak), sementara sisi lainnya abu-abu. Umumnya digunakan untuk kemasan makanan, elektronik ringan, dan produk konsumen</p>
+      </div>
+      <div class="feature">
+        <h3>Bahan kertas Kraft</h3>
+        <p>Keamanan terbaik untuk melindungi data Anda dengan teknologi terbaru.</p>
+      </div>
+      <div class="feature">
+        <h3>Bahan kaertas Ivory (Art Carton)</h3>
+        <p>Kertas jenis ini memiliki permukaan yang halus dan bisa dicetak dengan kualitas tinggi. Biasanya digunakan untuk kemasan premium seperti kosmetik, obat-obatan, dan produk eksklusif.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!--testimonial-->
+  <h1>Testimonial</h1>
+  <div class="testimonial-container">
+    <div class="testimonial">
+      
+        <h3>Rina, Pemilik Usaha Kue Kering di Bandung</h3>
+    <style>
+        .stars {
+            display: inline-block;
+            font-size: 24px;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        ★★★★★
+    </div>
+        <p>"Saya sangat puas dengan hasil cetakan dus kemasan dari jasa ini. Warna dan desainnya benar-benar sesuai dengan keinginan saya, bahkan lebih bagus dari yang saya bayangkan. Kualitasnya membuat produk saya terlihat lebih profesional dan menarik di mata pelanggan."</p>
+    </div>
+    <div class="testimonial">
+       
+        <h3>Sari, Pengusaha Skincare Lokal</h3>
+		 <style>
+        .stars {
+            display: inline-block;
+            font-size: 24px;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        ★★★★★
+    </div>
+        <p>"Kasa cetaknya rapi dan presisi. Dus kemasan produk saya jadi terlihat premium, padahal harganya sangat terjangkau. Banyak pelanggan yang bilang kemasannya cantik dan elegan. Ini sangat membantu meningkatkan brand saya."</p>
+    </div>
+    <div class="testimonial">
+       
+        <h3>Linda, Owner Toko Oleh-oleh Khas Jogja</h3>
+		 <style>
+        .stars {
+            display: inline-block;
+            font-size: 24px;
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        ★★★★★
+    </div>
+        <p>"Awalnya saya ragu, tapi setelah melihat hasil cetakan dus yang saya pesan, saya langsung jatuh cinta! Kualitas bahan dusnya tebal dan cetakannya tajam. Pengiriman juga cepat dan aman. Pasti akan repeat order."</p>
+    </div>
+</div>
+<!--testimonial-->
+  
+  
+  <!--FAQ-->
+<div class="faq-container">
+        <h1>FAQ</h1>
+        <div class="faq-item">
+            <button class="faq-title">Apa itu jasa cetak dus kemasan?</button>
+            <div class="faq-content">
+                <p>Jasa cetak dus kemasan adalah layanan pembuatan kotak atau kemasan produk dengan desain khusus sesuai kebutuhan merek atau perusahaan Anda.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-title">Bahan apa saja yang digunakan untuk membuat dus kemasan?</button>
+            <div class="faq-content">
+                <p>Umumnya menggunakan kertas duplex, kraft, ivory, atau corrugated (gelombang) tergantung kebutuhan dan kekuatan kemasan.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-title">Apakah bisa memesan dus kemasan dengan desain sendiri?</button>
+            <div class="faq-content">
+                <p>Ya, kami menerima file desain dari pelanggan atau membantu membuat desain sesuai permintaan.</p>
+            </div>
+			
+        </div>
+        <div class="faq-item">
+            <button class="faq-title">Berapa minimal pemesanan (MOQ) dus kemasan?</button>
+            <div class="faq-content">
+                <p> Minimal pemesanan bervariasi, umumnya mulai dari 500 atau 1.000 pcs, tergantung jenis dan ukuran kemasan.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Berapa lama waktu produksi dus kemasan?</button>
+            <div class="faq-content">
+                <p> Waktu produksi rata-rata antara 7–14 hari kerja setelah desain dan pembayaran disetujui.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Apakah tersedia layanan cetak full color?</button>
+            <div class="faq-content">
+                <p>Ya, kami menyediakan cetak full color dengan teknologi offset maupun digital printing.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Bisakah dus dibuat dengan finishing khusus?</button>
+            <div class="faq-content">
+                <p>Tentu, tersedia opsi finishing seperti laminasi glossy/matte, emboss, hotprint (foil), dan spot UV.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Apakah bisa membuat dus dengan bentuk khusus (custom shape)? </button>
+            <div class="faq-content">
+                <p> Ya, kami dapat memproduksi dus dengan bentuk dan ukuran khusus sesuai permintaan.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Bagaimana cara memesan jasa cetak dus kemasan?</button>
+            <div class="faq-content">
+                <p>Anda dapat memesan melalui website, email, atau datang langsung ke kantor kami dengan membawa detail produk dan desain.</p>
+            </div>
+        </div>
+		 <div class="faq-item">
+            <button class="faq-title">Apakah tersedia contoh (sample) sebelum produksi massal?</button>
+            <div class="faq-content">
+                <p>Ya, kami bisa menyediakan sample fisik atau digital untuk persetujuan sebelum produksi.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq-title').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+                
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.style.display = 'none';
+                });
+                
+                content.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    </script>
+	<!--FAQ-->
+	
+	<!--whatsup -->
+<div class="wabtn" id="wabutton">
+  <style> [wa-tooltip] { position: relative; cursor: default;  &:hover { &::before { content: attr(wa-tooltip); font-size: 16px; text-align: center; position: absolute; display: block; right: calc(0% - 100px); left: null; min-width: 200px; max-width: 200px; bottom: calc(100% + 40px); transform: translate(-50%); animation: fade-in 500ms ease; background: #00E785; border-radius: 4px; padding: 10px; color: #ffffff; z-index: 1; } } }  @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }  [wa-tooltip] {  }  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }</style>
+  <a wa-tooltip="Online 24 Jam" target="_self" href="https://wa.me/6283807395629?text=saya%20ingin%20menanyakan%20custome%20box" style=" cursor: pointer;height: 48px;width: auto;padding: 7px 7px 7px 7px;position: fixed !important;color: #fff;bottom: 20px;right: 20px;;display: flex;text-decoration: none;font-size: 18px;font-weight: 600;font-family: sans-serif;align-items: center;z-index: 999999999 !important;background-color: #00E785;box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.4);border-radius: 100px;animation: pulse 2.5s ease infinite;">
+    <svg width="34" height="34" style="padding: 5px;" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1024_354)"><path d="M23.8759 4.06939C21.4959 1.68839 18.3316 0.253548 14.9723 0.0320463C11.613 -0.189455 8.28774 0.817483 5.61565 2.86535C2.94357 4.91323 1.10682 7.86244 0.447451 11.1638C-0.21192 14.4652 0.351026 17.8937 2.03146 20.8109L0.0625 28.0004L7.42006 26.0712C9.45505 27.1794 11.7353 27.7601 14.0524 27.7602H14.0583C16.8029 27.7599 19.4859 26.946 21.768 25.4212C24.0502 23.8965 25.829 21.7294 26.8798 19.1939C27.9305 16.6583 28.206 13.8682 27.6713 11.1761C27.1367 8.48406 25.8159 6.01095 23.8759 4.06939ZM14.0583 25.4169H14.0538C11.988 25.417 9.96008 24.8617 8.1825 23.8091L7.7611 23.5593L3.3945 24.704L4.56014 20.448L4.28546 20.0117C2.92594 17.8454 2.32491 15.2886 2.57684 12.7434C2.82877 10.1982 3.91938 7.80894 5.67722 5.95113C7.43506 4.09332 9.76045 2.87235 12.2878 2.48017C14.8152 2.08799 17.4013 2.54684 19.6395 3.78457C21.8776 5.02231 23.641 6.96875 24.6524 9.3179C25.6638 11.6671 25.8659 14.2857 25.2268 16.7622C24.5877 19.2387 23.1438 21.4326 21.122 22.999C19.1001 24.5655 16.6151 25.4156 14.0575 25.4157L14.0583 25.4169Z" fill="#E0E0E0"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.6291 7.98363C10.3723 7.41271 10.1019 7.40123 9.85771 7.39143C9.65779 7.38275 9.42903 7.38331 9.20083 7.38331C9.0271 7.3879 8.8562 7.42837 8.69887 7.5022C8.54154 7.57602 8.40119 7.68159 8.28663 7.81227C7.899 8.17929 7.59209 8.62305 7.38547 9.11526C7.17884 9.60747 7.07704 10.1373 7.08655 10.6711C7.08655 12.3578 8.31519 13.9877 8.48655 14.2164C8.65791 14.4452 10.8581 18.0169 14.3425 19.3908C17.2382 20.5327 17.8276 20.3056 18.4562 20.2485C19.0848 20.1913 20.4843 19.4194 20.7701 18.6189C21.056 17.8183 21.0557 17.1323 20.9701 16.989C20.8844 16.8456 20.6559 16.7605 20.3129 16.5889C19.9699 16.4172 18.2849 15.5879 17.9704 15.4736C17.656 15.3594 17.4275 15.3023 17.199 15.6455C16.9705 15.9888 16.3139 16.7602 16.1137 16.9895C15.9135 17.2189 15.7136 17.2471 15.3709 17.0758C14.3603 16.6729 13.4275 16.0972 12.6143 15.3745C11.8648 14.6818 11.2221 13.8819 10.7072 13.0007C10.5073 12.6579 10.6857 12.472 10.8579 12.3007C11.0119 12.1472 11.2006 11.9005 11.3722 11.7003C11.5129 11.5271 11.6282 11.3346 11.7147 11.1289C11.7603 11.0343 11.7817 10.9299 11.7768 10.825C11.7719 10.7201 11.7409 10.6182 11.6867 10.5283C11.6001 10.3566 10.9337 8.66151 10.6291 7.98363Z" fill="white"></path><path d="M23.7628 4.02445C21.4107 1.66917 18.2825 0.249336 14.9611 0.0294866C11.6397 -0.190363 8.35161 0.804769 5.70953 2.82947C3.06745 4.85417 1.25154 7.77034 0.600156 11.0346C-0.051233 14.299 0.506321 17.6888 2.16894 20.5724L0.222656 27.6808L7.49566 25.7737C9.50727 26.8692 11.7613 27.4432 14.0519 27.4434H14.0577C16.7711 27.4436 19.4235 26.6392 21.6798 25.1321C23.936 23.6249 25.6947 21.4825 26.7335 18.9759C27.7722 16.4693 28.0444 13.711 27.5157 11.0497C26.9869 8.38835 25.6809 5.94358 23.7628 4.02445ZM14.0577 25.1269H14.0547C12.0125 25.1271 10.0078 24.5782 8.25054 23.5377L7.8339 23.2907L3.51686 24.4222L4.66906 20.2143L4.39774 19.7831C3.05387 17.6415 2.4598 15.1141 2.70892 12.598C2.95804 10.082 4.03622 7.72013 5.77398 5.88366C7.51173 4.04719 9.81051 2.84028 12.3089 2.45266C14.8074 2.06505 17.3638 2.5187 19.5763 3.74232C21.7888 4.96593 23.5319 6.89011 24.5317 9.21238C25.5314 11.5346 25.7311 14.1233 25.0993 16.5714C24.4675 19.0195 23.0401 21.1883 21.0414 22.7367C19.0427 24.2851 16.5861 25.1254 14.0577 25.1255V25.1269Z" fill="white"></path></g><defs><clipPath id="clip0_1024_354"><rect width="27.8748" height="28" fill="white" transform="translate(0.0625)"></rect></clipPath></defs></svg>
+    <span class="button-text">Hubungi Kami</span>
+  </a>
+</div>
+  
+
+  <div class="container" id="tentang">
+    <div class="cta">
+      <h2>Mengapa Memilih Kami?</h2>
+      <p>Harga ekonomis bahan premium, serta bisa menyesuaikan budget</p>
+      <a href="#">Hubungi Kami Sekarang</a>
+    </div>
+  </div>
+
+  <footer id="kontak">
+    <p>&copy; 2023 <a href="https://kemasanpack.com/cetak-kemasan/">cetak dus kemasan</a> Semua Hak Dilindungi.</p>
+    <p><a href="mailto:mailoffice@kemasanpack.com">mailoffice@kemasanpack.com</a> | Telepon: 0838-0739-5629</p> 
+  </footer>
+
+</body>
+</html>
